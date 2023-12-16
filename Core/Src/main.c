@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "mrubyc.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,6 +92,8 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  start_mrubyc();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,8 +102,8 @@ int main(void)
   {
 
 	  // Blink LD2
-	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	  HAL_Delay(1000);
+//	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+//	  HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
