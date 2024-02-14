@@ -14,14 +14,15 @@ void hal_init(void){
 }
 
 void hal_enable_irq(void){
+	__enable_irq();
 }
 
 void hal_disable_irq(void){
+	__disable_irq();
 }
 
 void hal_idle_cpu(void){
-	HAL_Delay(MRBC_TICK_UNIT);
-	mrbc_tick();
+	HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 }
 
 extern UART_HandleTypeDef huart2;
